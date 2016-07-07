@@ -1,0 +1,14 @@
+{
+  "name": "static",
+  "homepage": "https://github.com/jehpatil/hustleup",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
