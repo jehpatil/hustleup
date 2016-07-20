@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sale Funnel Management</title>
+
+    <!-- Bootstrap -->
+    
+    <link rel="icon" type="image/png" href="../static/images/fav_icon.png">
+
+    <link rel="stylesheet" href="../static/bower_components/bootstrap/dist/css/bootstrap.css" >
+    <!-- <link href="/static/bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"> -->
+
+    
+        <style>
+          @font-face {
+            font-family: Open Sans;
+          /*  src: url("../static/bower_components/open-sans-fontface/fonts/Regular/OpenSans-Regular.ttf");*/
+          }
+          body{
+            font-family: Open Sans, sans-serif;
+          }
+        </style>
+  </head>
+  <body>
+<nav class="navbar navbar-default" style="margin-bottom: 0px; background-color: #FFF">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/" >
+        <img src="../static/images/logo.png" alt="" style="width: 150px; margin-top: -15px; ">
+      </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!-- <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+      </ul> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home">Home</a></li>
+        <li><a href="registration">Register Organization</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid"  style="background-color: #f1f1f1; min-height: 90vh">
+    <div class="container">
+    <h3 style="text-align: center; margin-top: 80px; margin-bottom: 20px;"></h3>
+    <div class="row" style="margin-top: 10px;">
+      <div class="col-sm-4 col-sm-offset-4">
+          
+      </div>
+    </div>
+
+    <div class="row" style="" >
+      <form action ="/login/" method="POST">
+          <div class= "col-sm-4 col-sm-offset-4">
+            <div  id="example" class="animated animation-name clearfix bounce" style="background-color: #fff; padding: 10px 20px;">
+              <h4 style="text-align:center; margin-top: 5px; margin-bottom: 5px; color: #449d44;">{{loginDataInfo.orgName}}</h4>
+              <hr>
+             <div class="form-group">
+                <p style="font-size: 1em;">Username</p>
+                <input type="text" class="form-control" required value="" name ="name" ng-model="logindata.name" placeholder="Enter Your Name" style="height: 50px !important;" autofocus="true">
+                </div>
+                <div>
+                <p style="font-size: 1em;">Password</p>
+                <input type="password" class="form-control" required value="" name ="password" ng-model="logindata.name" placeholder="at least 6 digits" style="height: 50px !important;" autofocus="true">
+              </div>
+              <div class="form-group" style="text-align:center ;margin-top:20px">
+                <button type="submit" class="btn btn-success form-control" style="height: 40px; margin-bottom:20px;width:100%; height: 50px !important;" ng-click="submitLoginID(loginID)">Login</button>
+                <a href="#"><ul style="text-align:right">Forget Password</ul></a>
+              </div>
+
+            </div>
+
+          </div>
+      </form>
+    </div>
+
+</div> <!-- cont -->
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sale Funnel Management</title>
+
+    <!-- Bootstrap -->
+    
+    <link rel="icon" type="image/png" href="../static/images/fav_icon.png">
+
+    <link href="../static/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="/static/bower_components/font-awesome/css/font-awesome.css" rel="stylesheet"> -->
+
+    
+        <style>
+          @font-face {
+            font-family: Open Sans;
+/*            src: url("/static/bower_components/open-sans-fontface/fonts/Regular/OpenSans-Regular.ttf")*/;
+          }
+          body{
+            font-family: Open Sans, sans-serif;
+          }
+        </style>
+    
+
+  </head>
+  <body> 
+
+<nav class="navbar navbar-default" style="margin-bottom: 0px; background-color: #FFF">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/" >
+        <img src="../static/images/logo.png" alt="" style="width: 150px; margin-top: -15px; ">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home">Home</a></li>
+        <li><a href="registration">Register Organization</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<style>
+	.caption_input{
+		font-weight: normal; font-size: 0.8em; color: #666;
+	}
+	input{
+		height: 40px !important; border-radius: 2px !important;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0, 0) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0, 0) !important;
+	}
+</style>
+<div class ="container">
+	<h2 style=" margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #666;"> Organization <span style="color: #4CAF50 ; font-weight: bold;">Sign Up</span></h2>
+	<div class="row">
+			
+			
+	</div>
+
+	  <h4 style="margin-bottom: 20px;">
+	   <span style="color: #4CAF50 ; font-weight: bold;">Step 1:</span> Create Organization Profile </h4>
+	<form action="/registration/" method="POST"><input type='hidden' value="" />
+		<div class = "row">
+			<div class = "col-sm-6" >
+				<div class="form-group">
+					<label style="color: #4CAF50;">Organization Info</label> <br>
+					<label class="caption_input">Organization Name *</label>
+					<input type="text" class="form-control" placeholder="Organization Name" name="organizationName" required value="" autofocus="true">
+				</div>
+
+				<div class="form-group">
+					<label class="caption_input">Contact Number</label>
+					<input type="text" class="form-control" placeholder="10 Digit Mobile Number" name="organizationMobileNo"  value="" maxlength="10"  >
+				</div>
+				<div class="form-group">
+					<label class="caption_input">Email</label>
+					<input type="email" class="form-control" placeholder="Organization Email" name="organizationEmail" value="" >
+				</div>
+				<div class="form-group">
+					<label class="caption_input">Organization Login Id *</label>
+					<input type="text" class="form-control" placeholder="Organization Login Id" name="organizationLoginId" required value="">
+					<p style="font-size: 0.7em; margin-top: 5px; color; #666">Note : &nbsp;should not contain "special Characters", "blank space" or "." </p>
+				</div>
+			</div>
+			<div class = "col-sm-6" >
+					<label style="color: #4CAF50;">Organization Address</label>
+				<div class="form-group">
+					<label class="caption_input">Address Line 1 *</label>
+					<input type="text" class="form-control" placeholder="Address Line 1" name="addressLine1" required value="">
+				</div>
+				<div class="form-group">
+					<label class="caption_input">Address Line 2</label>
+					<input type="text" class="form-control" placeholder="Address Line 2" name="addressLine2" value="">
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+					<label class="caption_input">City *</label>
+					<input type="text" class="form-control" placeholder="City" name="city"  value="">
+				</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="caption_input">State *</label>
+							<input type="text" class="form-control" id="State" placeholder="State" name="state"  value="">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="caption_input">Pincode *</label>
+					<input type="text" class="form-control" placeholder="6 Digit Pincode" name="pin"  value="" maxlength="6">
+				</div>
+			</div>
+		</div>
+
+<!-- 		+++++++++++++++++++++++++++++++++++++++++++++++
+			+++++++++++++++++++++++++++++++++++++++++++++++
+			+++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+			<div class="row">
+				<div class="col-sm-12">
+					<hr style="border-top: 1px dashed #4CAF50">
+					<div class="row">
+						<div class="col-sm-12">
+							<h4 style="margin-bottom: 20px;">
+						  &nbsp; <span style="color: #4CAF50 ; font-weight: bold;"> Step 2: </span> Create Admin Account </h4>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="row" style="margin: 0px; margin-bottom: 22px;">
+								<div class="col-sm-6">
+								<label style="color: #4CAF50;">Admin Details</label> <br>
+									<div class="form-group">
+										<label class="caption_input">First Name *</label>
+										<input type="text" class="form-control" placeholder="First Name of Admin" name="firstName" required value="">
+									</div>
+								</div>
+								<div class="col-sm-6">
+								<label style="color: #4CAF50;">&nbsp;</label> <br>
+									<div class="form-group">
+										<label class="caption_input">Last Name *</label>
+										<input type="text" class="form-control" placeholder="Last Name of Admin" name="lastName" required value="">
+									</div>
+								</div>
+							</div>
+
+							<div class="row" style="margin: 0px;">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label class="caption_input">Contact Number *</label>
+										<input type="text" class="form-control" placeholder="10 Digit Mogile Number" name="adminMobileNo" required value="">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label class="caption_input">Email *</label>
+										<input type="text" class="form-control" placeholder="Admin Email Address" name="adminEmail" required value="">
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-sm-6">
+							<div class="row" style="margin: 0px;">
+								<div class="col-sm-12">
+								<label style="color: #4CAF50;">Login Credentials</label> <br>
+									<div class="form-group">
+										<label class="caption_input">Username *</label>
+										<input type="text" class="form-control" placeholder="Login Username" name="username" required value="">
+										<label class="caption_input">Note: "Special Characters", "Spaces" or "." are not allowed</label>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label class="caption_input">password *</label>
+										<input type="password" class="form-control" placeholder="Password" name="password" required value="">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label class="caption_input">Confirm Password *</label>
+										<input type="password" class="form-control" placeholder="Confirm Password" name="password1" required value="">
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		<div class="form-group" style="text-align:center ;margin-top:20px">
+			<button type="submit" class="btn btn-success form-control" style="height: 40px; margin-bottom:20px;width:200px" >Submit</button>
+		</div>
+	</form>
+</div>
+
+
+
+  
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+  </body>
+</html>
